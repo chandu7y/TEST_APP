@@ -38,7 +38,8 @@
       "minUI5Version": "1.146.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.uxap": {}
       }
     },
     "contentDensities": {
@@ -83,8 +84,8 @@
       ],
       "targets": {
         "TargetApp": {
-          "id": "App",
-          "name": "App"
+          "id": "Home",
+          "name": "Home"
         }
       }
     },

@@ -1,0 +1,75 @@
+<mvc:View controllerName="msg.ri.project1.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:uxap="sap.uxap"
+    xmlns:u="sap.ui.unified"
+    xmlns="sap.m">
+
+   <uxap:ObjectPageLayout id="ObjectPageLayout">
+        <!-- Header Title -->
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+                <uxap:heading>
+                    <Title text="Employee Details" />
+                </uxap:heading>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <!-- Content -->
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="false">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection>
+                        <uxap:blocks>
+                            <VBox height="100%" justifyContent="End" width="100%">
+                            <!-- Text Area -->
+                                <TextArea
+                                    id="textArea"
+                                    width="100%"
+                                    editable="false"
+                                    height="calc(100vh - 250px)"
+                                />
+
+                                <!-- Chatbox and Buttons for upload file and send file -->
+                                <VBox>
+                                    <Text id="fileNameText" text="" visible="false"/>
+                                    <HBox class="chatInputBar" alignItems="Center"
+                                        width="100%" fitContainer="true">
+                                        <TextArea
+                                            id="chatInput"
+                                            placeholder="Type your message..."
+                                            height="80px"
+                                            width="100%">
+                                            <layoutData>
+                                                <FlexItemData growFactor="1"/>
+                                            </layoutData>
+                                        </TextArea>
+
+                                        <Button
+                                            id="buttonSend"
+                                            text="Send"
+                                            press="onSend"
+                                            type="Emphasized">
+                                            <layoutData>
+                                                <FlexItemData styleClass="sapUiSmallMarginBegin"/>
+                                            </layoutData>
+                                        </Button>
+
+                                        <Button
+                                            id="uploadDocButton"
+                                            text="Select File"
+                                            press="onUploadDocument"
+                                            type="Emphasized">
+                                            <layoutData>
+                                                <FlexItemData styleClass="sapUiSmallMarginBegin"/>
+                                            </layoutData>
+                                        </Button>
+                                    </HBox>
+                                </VBox>
+                            </VBox>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>
