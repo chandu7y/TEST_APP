@@ -23,7 +23,7 @@
                             <VBox height="100%" justifyContent="End" width="100%">
                             <!-- Text Area -->
                                 <TextArea
-                                    id="textArea"
+                                    id="fileTextArea"
                                     width="100%"
                                     editable="false"
                                     height="calc(100vh - 250px)"
@@ -31,7 +31,6 @@
 
                                 <!-- Chatbox and Buttons for upload file and send file -->
                                 <VBox>
-                                    <Text id="fileNameText" text="" visible="false"/>
                                     <HBox class="chatInputBar" alignItems="Center"
                                         width="100%" fitContainer="true">
                                         <TextArea
